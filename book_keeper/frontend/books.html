@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book Keeper — View Books</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="books-banner">
+    <h1>VIEW BOOKS</h1>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <img src="img/red-logo.png" alt="Book Keeper Logo" class="sidebar-logo">
+      <nav class="sidebar-nav">
+        <a href="home.html">HOME</a>
+        <a href="books.html" class="active">VIEW BOOKS</a>
+        <a href="borrowed.html">BORROWED</a>
+        <a href="returned.html">RETURNED</a>
+      </nav>
+      <div class="logout">
+        <a href="../api/logout.php">LOG OUT</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <div id="borrowModal" class="modal hidden">
+    <form id="borrowForm" class="modal-card">
+      <h3>BORROW</h3>
+      <label>Date</label>
+      <input type="date" name="borrowDate" required>
+      
+      <label>Duration (days)</label>
+      <input type="number" name="duration" min="1" required>
+      
+      <p class="small">TO CONFIRM ENTER PASSWORD</p>
+      <input type="password" name="password" required>
+      <input type="hidden" name="book_id">
+      
+      <div class="modal-actions">
+        <button class="btn btn-red" type="submit">BORROW</button>
+        <button type="button" class="btn" onclick="closeModal('borrowModal')">Close</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

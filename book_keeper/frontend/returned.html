@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book Keeper — Returned Books</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="return-banner">
+    <h1>RETURNED BOOKS</h1>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <img src="img/red-logo.png" alt="Book Keeper Logo" class="sidebar-logo">
+      <nav class="sidebar-nav">
+        <a href="home.html">HOME</a>
+        <a href="books.html">VIEW BOOKS</a>
+        <a href="borrowed.html">BORROWED</a>
+        <a href="returned.html" class="active">RETURNED</a>
+      </nav>
+      <div class="logout">
+        <a href="../api/logout.php">LOG OUT</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div id="returnedGrid" class="grid"></div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

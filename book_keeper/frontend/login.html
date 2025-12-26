@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book Keeper — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error {
+      color: rgb(255, 0, 0);
+      font-size: 0.9em;
+      margin-top: 4px;
+      display: block;
+    }
+  </style>
+</head>
+<body class="auth-layout">
+  <div class="auth-banner">
+    <img src="img/logo.png" alt="Logo" class="auth-logo">
+    <h2>College of Computer Studies</h2>
+    <h1>BOOK KEEPER</h1>
+  </div>  
+  <div class="auth-form-wrapper">
+    <div class="auth-box">
+      <form class="auth-form" action="../api/login.php" method="post" id="loginForm">
+        <h2>Log in</h2>
+
+        <label>Student No.</label>
+        <input type="text" name="student_no" required>
+        <small class="error" id="studentNoError"></small>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+        <small class="error" id="passwordError"></small>
+        
+        <div class="auth-actions">
+          <button type="submit" class="btn btn-red">LogIn</button>
+        </div>
+        <p class="small">Don’t have an account? <a href="register.html">Register</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", function(e) {
+        let valid = true;
+
+        const studentNo = form.querySelector("[name='student_no']");
+        const password = form.querySelector("[name='password']");
+
+        document.getElementById("studentNoError").textContent = "";
+        document.getElementById("passwordError").textContent = "";
+
+        if (!/^\d+$/.test(studentNo.value)) {
+          document.getElementById("studentNoError").textContent = "❌ Student number must contain digits only.";
+          valid = false;
+        }
+
+        // Password must be at least 8 characters
+        if (password.value.length < 8) {
+          document.getElementById("passwordError").textContent = "❌ Password must be at least 8 characters.";
+          valid = false;
+        }
+
+        if (!valid) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("error") === "norecord") {
+      alert("❌ No record found.");
+    }
+  </script>
+</body>
+</html>
