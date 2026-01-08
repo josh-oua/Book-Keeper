@@ -1,0 +1,424 @@
+:root {
+  --red: #d40000;
+  --green: #22c55e;
+  --black: #000;
+  --white: #fff;
+}
+
+* { 
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+body { 
+  margin: 0; 
+  background: var(--white); 
+  color: var(--black); 
+}
+
+
+.auth-layout { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+.auth-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+}
+
+.auth-box {
+  background: var(--white);
+  border: 3px solid var(--black);
+  border-radius: 12px;
+  padding: 10px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 4px 4px 0 var(--black);
+}
+
+.auth-banner {  
+  background: var(--red);
+  color: var(--white);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+  height: 100vh;           
+  text-align: center;      
+}
+
+.auth-logo {
+  width: 300px;       
+  margin-bottom: 10px; 
+  margin-top: -140px;
+}
+
+.btn.btn-red:hover {
+  background: var(--green);
+  color: var(--black);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.btn.btn-green:hover {
+  background: var(--red);
+  color: var(--black);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.auth-banner h1 { 
+  font-size: 120px;
+  margin: 0; 
+  font-family: 'League Spartan', Arial, sans-serif; 
+}
+
+.auth-banner h1 + h1 {
+  margin-top: 0px;
+}
+
+.auth-banner h2 {
+  font-family: 'League Spartan', Arial, sans-serif;
+  font-size: 30px;
+}
+
+.auth-form { 
+  padding: 40px;
+  max-width: 420px; 
+  align-self: center;
+}
+
+.auth-form h2 { 
+  text-align: center; 
+  margin-top: 0; 
+}
+
+.auth-form label { 
+  display: block; 
+  margin-top: 12px; 
+  font-weight: 700; 
+}
+
+.auth-form input { 
+  width: 100%; 
+  padding: 10px; 
+  border: 2px solid var(--black); 
+  border-radius: 8px; 
+  margin-top: 6px; 
+}
+
+.auth-actions { 
+  display: flex; 
+  gap: 12px; 
+  justify-content: center; 
+  margin-top: 16px; 
+}
+
+.auth-form button {
+  display: block;        
+  width: 100%;           
+  max-width: 250px;      
+  margin: 0 auto;       
+}
+
+.link { 
+  color: var(--black); 
+  text-decoration: underline; 
+}
+
+.home-banner {
+  background: var(--red);
+  color: var(--white);
+  padding: 60px;
+  
+}
+.home-banner h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  text-align: left; 
+  padding-left: 520px;
+  padding-bottom:20px;
+  padding-top: 35px;
+}
+
+.books-banner {
+  background: var(--red);
+  color: var(--white);
+  padding: 10px;
+  
+}
+.books-banner h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  text-align: left; 
+  padding-left: 610px;
+  padding-bottom:20px;
+  padding-top: 35px;
+}
+
+.borrow-banner {
+  background: var(--red);
+  color: var(--white);
+  padding: 10px;
+  
+}
+.borrow-banner h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  text-align: left; 
+  padding-left: 520px;
+  padding-bottom:20px;
+  padding-top: 35px;
+}
+
+.return-banner {
+  background: var(--red);
+  color: var(--white);
+  padding: 10px;
+  
+}
+.return-banner h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  text-align: left; 
+  padding-left: 540px;
+  padding-bottom:20px;
+  padding-top: 35px;
+}
+
+
+
+.sidebar-logo {
+  display: block;
+  width: 210px;         
+  max-height: 240px;    
+  margin: 0 auto 20px auto;
+  object-fit: contain;  
+}
+
+.sidebar nav {
+  display: grid;
+  margin-top: 60px;
+  gap: 8px; 
+
+}
+
+.sidebar a,
+form button {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 5 auto;
+  padding: 6px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid var(--black);
+  border-radius: 8px; 
+  background: var(--white);
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  height: 50px;
+  font-size: 25px;
+  
+}
+
+
+
+.main { 
+  margin-left: 60px; 
+  padding: 24px; 
+}
+
+.main h2 {
+  margin-top: 32px;
+  margin-bottom: 8px;
+  padding-bottom: 2px;
+  font-size: 30px;
+  text-align: left; 
+  padding-left: 0px ;
+  
+}
+.main p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 1.6;
+}
+
+.section-box {
+  border: 2px solid var(--black);   
+  border-radius: 8px;               
+  padding: 20px;                    
+  margin-top: 5px;                 
+  margin-bottom: 5px;              
+  background: var(--white);        
+  box-shadow: 4px 4px 0 var(--black);
+}
+
+.section-box:hover {
+  background-color: rgba(255, 0, 0, 0.05);   
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--red); 
+  
+} 
+
+.sidebar a.active, .btn.btn-red { background: var(--red); color: var(--white); }
+
+
+@media (min-width: 900px) { .main { margin-left: 280px; } }
+
+h1 { margin: 0 0 8px; }
+.actions { display: flex; gap: 12px; margin-top: 16px; }
+
+.btn { padding: 10px 16px; border: 2px solid var(--black); border-radius: 10px; font-weight: 700; cursor: pointer; }
+.btn-green { background: var(--green); color: var(--black); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; margin-top: 16px; }
+.card { position: relative; border: 3px solid var(--black); border-radius: 12px; min-height: 160px; padding: 16px; background: #fff5f5; }
+.book-icon { font-size: 64px; }
+
+
+.card-actions { position: absolute; left: 16px; right: 16px; bottom: 16px; display: none; gap: 10px; }
+.card:hover .card-actions { display: flex; }
+.card-actions .btn { width: 100%; }
+
+.book-author { font-size: 14px; text-align: center; margin-top: 4px; color: var(--gray); }
+
+
+.modal.hidden { display: none; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.3); display: grid; place-items: center; z-index: 20; }
+.modal-card { background: var(--white); border: 3px solid var(--black); border-radius: 12px; padding: 20px; width: 360px; }
+.modal-card h3 { margin-top: 0; text-align: center; }
+.modal-card label { display: block; margin-top: 10px; font-weight: 700; }
+.small { display: block; margin-top: 12px; font-weight: 700; }
+.modal-card input { width: 100%; padding: 10px; border: 2px solid var(--black); border-radius: 8px; margin-top: 6px; }
+.modal-actions { display: flex; gap: 10px; margin-top: 16px; }
+
+.error {
+      color: rgb(255, 0, 0);
+      font-size: 0.9em;
+      margin-top: 4px;
+      display: block;
+    }
+
+/* Red banner */
+.home-banner {
+  background: var(--red);
+  color: var(--white);
+  padding: 10px;
+  text-align: center;
+}
+.home-logo {
+  width: 220px;
+  margin-bottom: 0px;
+}
+
+.actions a.btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background: var(--red);
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  width: 100%;
+  max-width: 260px; /* same as sidebar width */
+  margin: 8px auto;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  background: var(--white);
+  border-right: 3px solid var(--black);
+  transition: transform .3s ease;
+  z-index: 10;
+}
+
+
+.sidebar-content {
+  flex-direction: column;
+  height: 100%;
+  padding: 26px;
+}
+.logout {
+  margin-top: 240px;
+}
+
+
+.user-label {
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+
+.sidebar nav {
+  display: grid;
+  gap: 8px;
+  flex-grow: 1;
+}
+.sidebar a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  max-width: 260px;
+  margin: 0 auto;
+}
+.sidebar a:hover {
+  background: var(--red);
+  color: var(--white);
+}
+.sidebar a.active {
+  background: var(--red);
+  color: var(--white);
+}
+
+.book-cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--black);
+}
+
+.book-title {
+  margin-top: 8px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 16px;
+}
+
+.card-actions {
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card:hover .card-actions {
+  display: block;
+}
+
+.book-meta {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 4px;
+  color: var(--gray);
+}
